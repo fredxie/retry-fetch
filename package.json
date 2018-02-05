@@ -1,20 +1,36 @@
 {
   "name": "retry-fetch",
   "version": "1.0.0",
-  "description": "",
+  "description": "A backoff retry strategy for the fetch API",
+  "bugs": {
+    "url": "https://github.com/fredxie/retry-fetch/issues"
+  },
+  "homepage": "https://github.com/fredxie/retry-fetch#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fredxie/retry-fetch.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "retry-fetch",
+    "exponential",
+    "backoff",
+    "retry",
+    "fetch"
+  ],
+  "author": "Fred Xie",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fredxie/retry-fetch/issues"
+  "dependencies": {
+    "es6-promise": "^4.1.0",
+    "isomorphic-fetch": "^2.2.1"
   },
-  "homepage": "https://github.com/fredxie/retry-fetch#readme"
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2"
+  }
 }
